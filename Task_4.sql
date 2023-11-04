@@ -1,0 +1,1 @@
+SELECT customers.customer_ID, customers.name AS Customer_Name, SUM(total_amount) as Total_Purchase FROM orders JOIN customers ON orders.customer_ID = customers.customer_ID GROUP BY orders.customer_ID ORDER BY Total_Purchase DESC LIMIT 5

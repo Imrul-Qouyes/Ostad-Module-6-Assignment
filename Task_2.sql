@@ -1,0 +1,2 @@
+SELECT order_items.order_ID, products.name AS Product_Name, order_items.unit_price, order_items.quantity, (order_items.quantity * order_items.unit_price) AS Total_Amount FROM order_items JOIN products ON order_items.product_ID = products.product_ID
+LEFT JOIN orders ON order_items.order_ID = orders.order_ID ORDER BY orders.order_ID ASC
